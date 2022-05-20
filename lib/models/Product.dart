@@ -4,7 +4,15 @@ Product productFromJson(String str) => Product.fromJson(json.decode(str));
 String productToJson(Product data) => json.encode(data.toJson());
 
 class Product {
-  Product({this.name, this.price, this.rate, this.reviews, this.description, this.image, this.percent, this.discount});
+  Product(
+      {this.name,
+      this.price,
+      this.rate,
+      this.reviews,
+      this.description,
+      this.image,
+      this.percent,
+      this.discount});
 
   Product.fromJson(dynamic json) {
     name = json['name'];
@@ -88,7 +96,7 @@ List<Product> products = [
   Product(
     name: "Space Gray Aluminum Case with Sport Band",
     price: "\$399.90",
-    rate: 5.0,
+    rate: 2.3,
     reviews: '137',
     description:
         "Connection Type : Wireless\nBluetooth Connection : Yes\nWater Resistance: No\nNFC (Near Field Communication): Yes",

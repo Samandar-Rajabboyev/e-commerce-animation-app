@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:splash_animation/constants.dart';
 import 'package:splash_animation/models/Product.dart';
+import 'package:splash_animation/pages/spacer.dart';
 
 import 'item_product_widget.dart';
 
@@ -13,7 +14,7 @@ class BottomModal extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 1.5,
+      height: MediaQuery.of(context).size.height * 1.3,
       padding: const EdgeInsets.symmetric(
         vertical: 28,
         horizontal: 32,
@@ -48,11 +49,7 @@ class BottomModal extends StatelessWidget {
                   );
                 }),
           ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 2,
-            color: const Color(0xffE9EDF0),
-          ),
+          buildSpacer(context),
           Expanded(
             flex: 6,
             child: Column(
@@ -89,7 +86,8 @@ class BottomModal extends StatelessWidget {
                         cardHeight: 160,
                       );
                     },
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       mainAxisExtent: 240,
                       crossAxisSpacing: 14,

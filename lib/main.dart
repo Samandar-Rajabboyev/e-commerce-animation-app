@@ -6,6 +6,7 @@ import 'package:splash_animation/pages/home_page.dart';
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
+      statusBarBrightness: Brightness.dark,
       statusBarColor: clr_splashBG,
     ),
   );
