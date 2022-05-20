@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:splash_animation/constants.dart';
 import 'package:splash_animation/pages/home_page.dart';
-import 'package:splash_animation/pages/splash_page.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: clr_splashBG,
+    ),
+  );
   runApp(const MyApp());
 }
 
@@ -13,10 +19,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Avenir'),
       home: const HomePage(),
       routes: {
-        SplashPage.id: (context) => const SplashPage(),
         HomePage.id: (context) => const HomePage(),
+        // ProductDetailsPage.id: (context) => ProductDetailsPage(),
       },
     );
   }
